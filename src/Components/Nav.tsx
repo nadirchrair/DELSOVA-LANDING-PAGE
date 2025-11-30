@@ -1,21 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/Group 150.png';
-import frFlag from '../assets/flag.png';
+import { CheckCircle, Clock, UserCheck, Mail, Facebook, Instagram, Linkedin, Music2, Phone, Code, Brain, Smartphone } from 'lucide-react';
 
+// Nav Component
 function Nav() {
   return (
-    <nav className="flex items-center justify-between w-full bg-[#FBFBFB] px-4 lg:px-8 py-4 shadow-sm">
+    <nav className="flex items-center justify-between w-full bg-[#f9fcf8] px-4 lg:px-8 py-4 shadow-sm">
       {/* === DESKTOP LAYOUT (lg and up) === */}
       <div className="hidden lg:flex items-center w-full">
         {/* Logo (20%) */}
         <div className="w-[20%] flex items-center">
           <Link to="/">
-            <img
-              src={logo}
-              alt="Logo"
-              className="h-10 object-contain cursor-pointer"
-            />
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-[#4186d8] to-[#964cb2] rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-lg">D</span>
+              </div>
+              <span className="text-[#0e1934] text-xl font-bold">Delsova</span>
+            </div>
           </Link>
         </div>
 
@@ -26,28 +27,31 @@ function Nav() {
         <div className="w-[35%] flex justify-around items-center">
           <Link
             to="/"
-            className="text-black text-lg font-normal font-['Inter'] hover:text-blue-600 transition px-2 py-1"
+            className="text-[#0e1934] text-lg font-medium hover:text-[#4186d8] transition px-2 py-1"
           >
             Accueil
           </Link>
 
           <Link
-            to="/comment-ca-marche"
-            className="text-black text-lg font-normal font-['Inter'] hover:text-blue-600 transition px-2 py-1"
+            to="/services"
+            className="text-[#0e1934] text-lg font-medium hover:text-[#4186d8] transition px-2 py-1"
           >
-            Comment ça marche
+            Services
+          </Link>
+
+          <Link
+            to="/apropos"
+            className="text-[#0e1934] text-lg font-medium hover:text-[#4186d8] transition px-2 py-1"
+          >
+            À propos
           </Link>
 
           {/* Langue Selector */}
-          <div className="w-36 h-12 flex items-center justify-start gap-3 rounded-[28.5px] border-[1.5px] border-[#C6E700] px-3 cursor-pointer hover:bg-[#F9FFCC] transition">
-            <div className="w-8 h-8 bg-[#F3FFAD] rounded-full flex items-center justify-center overflow-hidden">
-              <img
-                src={frFlag}
-                alt="French Flag"
-                className="w-4 h-4 object-cover"
-              />
+          <div className="w-36 h-12 flex items-center justify-start gap-3 rounded-[28.5px] border-[1.5px] border-[#4186d8] px-3 cursor-pointer hover:bg-[#f0f5ff] transition">
+            <div className="w-8 h-8 bg-[#e6f0ff] rounded-full flex items-center justify-center overflow-hidden">
+              <div className="w-4 h-4 bg-gradient-to-r from-[#0e1934] to-[#4186d8] rounded-full" />
             </div>
-            <div className="text-black text-base font-normal font-['Inter']">
+            <div className="text-[#0e1934] text-base font-medium">
               Français
             </div>
           </div>
@@ -58,37 +62,38 @@ function Nav() {
       <div className="flex lg:hidden w-full justify-between items-center px-2">
         {/* Logo */}
         <div className="w-1/4 flex justify-start">
-          <img src={logo} alt="Logo" className="h-8 object-contain" />
+          <div className="flex items-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-[#4186d8] to-[#964cb2] rounded-lg flex items-center justify-center mr-2">
+              <span className="text-white font-bold text-sm">D</span>
+            </div>
+            <span className="text-[#0e1934] text-lg font-bold">Delsova</span>
+          </div>
         </div>
 
         {/* Navigation Links */}
-        <div className="flex w-2/4 justify-center gap-4">
+        <div className="flex w-2/4 justify-center gap-2">
           <Link
             to="/"
-            className="text-black text-sm font-normal font-['Inter'] hover:text-blue-600 transition px-2 py-1"
+            className="text-[#0e1934] text-sm font-medium hover:text-[#4186d8] transition px-2 py-1"
           >
             Accueil
           </Link>
 
           <Link
-            to="/comment-ca-marche"
-            className="text-black text-sm font-normal font-['Inter'] hover:text-blue-600 transition px-2 py-1"
+            to="/services"
+            className="text-[#0e1934] text-sm font-medium hover:text-[#4186d8] transition px-2 py-1"
           >
-            Comment ça marche
+            Services
           </Link>
         </div>
 
         {/* Language Selector */}
         <div className="w-1/4 flex justify-end">
           <div className="flex flex-col items-center justify-center">
-            <div className="w-8 h-8 bg-[#F3FFAD] rounded-full flex items-center justify-center overflow-hidden border-[1.5px] border-[#C6E700]">
-              <img
-                src={frFlag}
-                alt="French Flag"
-                className="w-4 h-4 object-cover"
-              />
+            <div className="w-8 h-8 bg-[#e6f0ff] rounded-full flex items-center justify-center overflow-hidden border-[1.5px] border-[#4186d8]">
+              <div className="w-4 h-4 bg-gradient-to-r from-[#0e1934] to-[#4186d8] rounded-full" />
             </div>
-            <div className="text-black text-xs font-normal font-['Inter'] mt-1">
+            <div className="text-[#0e1934] text-xs font-medium mt-1">
               FR
             </div>
           </div>
