@@ -1,6 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Clock, UserCheck, Mail, Facebook, Instagram, Linkedin, Music2, Phone, Code, Brain, Smartphone } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  CheckCircle,
+  Clock,
+  UserCheck,
+  Mail,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Music2,
+  Phone,
+  Code,
+  Brain,
+  Smartphone,
+} from "lucide-react";
+import logo from "../../public/assets/delsova-1.png";
 
 // Nav Component
 function Nav() {
@@ -12,9 +26,12 @@ function Nav() {
         <div className="w-[20%] flex items-center">
           <Link to="/">
             <div className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-[#4186d8] to-[#964cb2] rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-lg">D</span>
-              </div>
+              <img
+                src={logo}
+                alt="Delsova Logo"
+                className="w-10 h-10 object-contain mr-3"
+              />
+
               <span className="text-[#0e1934] text-xl font-bold">Delsova</span>
             </div>
           </Link>
@@ -51,9 +68,7 @@ function Nav() {
             <div className="w-8 h-8 bg-[#e6f0ff] rounded-full flex items-center justify-center overflow-hidden">
               <div className="w-4 h-4 bg-gradient-to-r from-[#0e1934] to-[#4186d8] rounded-full" />
             </div>
-            <div className="text-[#0e1934] text-base font-medium">
-              Français
-            </div>
+            <div className="text-[#0e1934] text-base font-medium">Français</div>
           </div>
         </div>
       </div>
@@ -63,9 +78,12 @@ function Nav() {
         {/* Logo */}
         <div className="w-1/4 flex justify-start">
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-gradient-to-r from-[#4186d8] to-[#964cb2] rounded-lg flex items-center justify-center mr-2">
-              <span className="text-white font-bold text-sm">D</span>
-            </div>
+            <img
+              src={logo}
+              alt="Delsova Logo"
+              className="w-8 h-8 object-contain mr-2"
+            />
+
             <span className="text-[#0e1934] text-lg font-bold">Delsova</span>
           </div>
         </div>
@@ -93,9 +111,7 @@ function Nav() {
             <div className="w-8 h-8 bg-[#e6f0ff] rounded-full flex items-center justify-center overflow-hidden border-[1.5px] border-[#4186d8]">
               <div className="w-4 h-4 bg-gradient-to-r from-[#0e1934] to-[#4186d8] rounded-full" />
             </div>
-            <div className="text-[#0e1934] text-xs font-medium mt-1">
-              FR
-            </div>
+            <div className="text-[#0e1934] text-xs font-medium mt-1">FR</div>
           </div>
         </div>
       </div>

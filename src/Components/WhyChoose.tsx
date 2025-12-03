@@ -1,6 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Clock, UserCheck, Mail, Facebook, Instagram, Linkedin, Music2, Phone, Code, Brain, Smartphone } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  CheckCircle,
+  Clock,
+  UserCheck,
+  Mail,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Music2,
+  Phone,
+  Code,
+  Brain,
+  Smartphone,
+} from "lucide-react";
+import logo from "../../public/assets/delsova-1.png";
 
 // WhyChoose Component
 const WhyChoose: React.FC = () => {
@@ -9,22 +23,12 @@ const WhyChoose: React.FC = () => {
       {/* ---------- Left Section ---------- */}
       <div className="w-full lg:w-1/3 flex flex-col gap-6 items-center lg:items-start text-center lg:text-left">
         <div className="text-[#0e1934] text-2xl lg:text-3xl font-bold">
-          Pourquoi choisir
-        </div>
-
-        {/* Logo and ? inline */}
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-r from-[#4186d8] to-[#964cb2] rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl lg:text-2xl">D</span>
-          </div>
-          <div className="text-[#964cb2] text-7xl lg:text-8xl font-normal leading-none">
-            ?
-          </div>
+          Pourquoi choisir DELSOVA ?
         </div>
 
         <div className="text-[#0e1934] text-base font-normal max-w-full lg:max-w-sm">
-          Delsova combine expertise technique et innovation pour créer des solutions 
-          digitales qui répondent parfaitement à vos besoins business.
+          Delsova combine expertise technique et innovation pour créer des
+          solutions digitales qui répondent parfaitement à vos besoins business.
         </div>
       </div>
 
@@ -40,7 +44,8 @@ const WhyChoose: React.FC = () => {
               Expertise Technique
             </div>
             <div className="text-white text-xs font-normal max-w-full lg:max-w-[14rem]">
-              Équipe d'experts en développement full-stack, mobile et intelligence artificielle.
+              Équipe d'experts en développement full-stack, mobile et
+              intelligence artificielle.
             </div>
           </div>
         </div>
@@ -55,7 +60,8 @@ const WhyChoose: React.FC = () => {
               Innovation IA
             </div>
             <div className="text-[#0e1934] text-xs font-normal max-w-full lg:max-w-[14rem]">
-              Solutions d'IA avancées en vision par ordinateur et génération de contenu.
+              Solutions d'IA avancées en vision par ordinateur et génération de
+              contenu.
             </div>
           </div>
         </div>
@@ -70,7 +76,8 @@ const WhyChoose: React.FC = () => {
               Livraison Rapide
             </div>
             <div className="text-[#0e1934] text-xs font-normal max-w-full lg:max-w-[14rem]">
-              Méthodologies agiles pour des résultats rapides sans compromis qualité.
+              Méthodologies agiles pour des résultats rapides sans compromis
+              qualité.
             </div>
           </div>
         </div>
@@ -85,7 +92,8 @@ const WhyChoose: React.FC = () => {
               Support Continu
             </div>
             <div className="text-[#0e1934] text-xs font-normal max-w-full lg:max-w-[14rem]">
-              Accompagnement et maintenance continue pour assurer le succès de votre projet.
+              Accompagnement et maintenance continue pour assurer le succès de
+              votre projet.
             </div>
           </div>
         </div>
