@@ -293,67 +293,6 @@ function AProposDeNous() {
           </div>
         </div>
       </div>
-
-      {/* Section Histoire */}
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0e1934] mb-4">
-            Notre Histoire
-          </h2>
-        </div>
-
-        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-gray-100">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Delsova Technologies a été fondée en 2020 par trois développeurs
-                passionnés qui se sont rencontrés lors de projets communs dans
-                le domaine du développement web et mobile.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Basés à Oran, capitale économique de l'Ouest algérien, nous
-                avons choisi cette ville dynamique pour son écosystème
-                technologique en plein essor et sa position stratégique sur la
-                Méditerranée.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Notre équipe combine des compétences complémentaires en
-                développement full-stack, mobile et infrastructure, nous
-                permettant d'aborder des projets complexes avec une approche
-                holistique.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
-              <h4 className="font-bold text-gray-800 mb-4 text-lg">
-                Pourquoi "Delsova" ?
-              </h4>
-              <p className="text-gray-600 mb-4">
-                Le nom "Delsova" est une contraction de{" "}
-                <span className="font-medium text-[#4186d8]">DEL</span>oppement,
-                <span className="font-medium text-[#964cb2]"> SO</span>ftware et{" "}
-                <span className="font-medium text-emerald-600">VA</span>leur,
-                représentant notre engagement à créer des solutions logicielles
-                qui génèrent de la valeur.
-              </p>
-              <div className="flex items-center justify-center gap-4 mt-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-[#4186d8]">3</div>
-                  <div className="text-xs text-gray-500">Fondateurs</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-[#964cb2]">50+</div>
-                  <div className="text-xs text-gray-500">Projets</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-emerald-600">1</div>
-                  <div className="text-xs text-gray-500">Siège à Oran</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

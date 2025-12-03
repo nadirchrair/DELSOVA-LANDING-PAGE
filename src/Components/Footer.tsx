@@ -17,10 +17,7 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative w-full  overflow-hidden text-gray-900 pt-8">
-      {/* ===== Wave Container ===== */}
-
-      {/* ===== Footer Content ===== */}
+    <footer className="relative w-full  overflow-hidden text-gray-900 ">
       <div className="relative z-20 bg-gradient-to-r from-[#4186d8] to-[#964cb2] px-6 lg:px-16 py-8 lg:py-12">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-12">
           {/* === Left Section === */}
