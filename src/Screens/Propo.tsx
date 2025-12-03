@@ -7,8 +7,6 @@ function Propo() {
   return (
     <div>
       <AProposDeNous />
-
-      <Footer />
     </div>
   );
 }

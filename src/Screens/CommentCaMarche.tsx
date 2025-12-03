@@ -9,8 +9,6 @@ function CommentCaMarche() {
       {/* Vos autres composants */}
       <NosExpertises />
       {/* Suite de votre page */}
-
-      <Footer />
     </>
   );
 }

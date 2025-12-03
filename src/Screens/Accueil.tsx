@@ -29,8 +29,6 @@ function Accueil() {
       <NotreProcessusClient />
       <NotreMission />
       <ContactForm />
-
-      <Footer />
     </div>
   );
 }
