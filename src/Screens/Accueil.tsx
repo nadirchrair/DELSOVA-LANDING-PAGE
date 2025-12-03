@@ -14,6 +14,7 @@ import {
 } from "../Components/WaveVariants";
 import AProposDeNous from "../Components/AProposDeNous";
 import NotreMission from "../Components/NotreMission";
+import Faq from "../Components/Faq";
 
 function Accueil() {
   return (
@@ -28,6 +29,7 @@ function Accueil() {
 
       <NotreProcessusClient />
       <NotreMission />
+      <Faq />
       <ContactForm />
     </div>
   );
