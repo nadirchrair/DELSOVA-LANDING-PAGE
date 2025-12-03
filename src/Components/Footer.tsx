@@ -17,7 +17,7 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative w-full bg-[#f9fcf8] overflow-hidden text-gray-900 pt-8">
+    <footer className="relative w-full  overflow-hidden text-gray-900 pt-8">
       {/* ===== Wave Container ===== */}
 
       {/* ===== Footer Content ===== */}

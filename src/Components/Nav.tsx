@@ -1,25 +1,11 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import {
-  CheckCircle,
-  Clock,
-  UserCheck,
-  Mail,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Music2,
-  Phone,
-  Code,
-  Brain,
-  Smartphone,
-} from "lucide-react";
-import logo from "../../public/assets/delsova-1.png";
+
+import logo from "../assets/delsova-1.png";
 
 // Nav Component
 function Nav() {
   return (
-    <nav className="flex items-center justify-between w-full bg-[#f9fcf8] px-4 lg:px-8 py-4 shadow-sm">
+    <nav className="flex items-center justify-between w-full bg-[#f9fcf8] px-4 lg:px-8 py-4 shadow-sm border-b-2 border-b-purple-500">
       {/* === DESKTOP LAYOUT (lg and up) === */}
       <div className="hidden lg:flex items-center w-full">
         {/* Logo (20%) */}
