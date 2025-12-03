@@ -1,24 +1,16 @@
-import React from 'react'
-import { NosExpertisesCompact } from '../Components/NosExpertises'
-import Footer from '../Components/Footer'
-import { AdvancedWaveSeparator } from '../Components/WaveVariants'
+import React from "react";
+import NosExpertises from "/src/Components/NosExpertises.tsx";
+import Footer from "../Components/Footer";
+import { AdvancedWaveSeparator } from "../Components/WaveVariants";
 
 function CommentCaMarche() {
   return (
-     <>
+    <>
       {/* Vos autres composants */}
-      <NosExpertisesCompact />
+      <NosExpertises />
       {/* Suite de votre page */}
-
-       <AdvancedWaveSeparator 
-                variant="liquid"
-                direction="up"
-                colors={{ secondary: '#964cb2' }}
-                animated={true}
-              />
-         <Footer />
     </>
-  )
+  );
 }
 
-export default CommentCaMarche
+export default CommentCaMarche;

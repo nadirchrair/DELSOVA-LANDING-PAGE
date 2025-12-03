@@ -1,6 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Clock, UserCheck, Mail, Facebook, Instagram, Linkedin, Music2, Phone, Code, Brain, Smartphone } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  CheckCircle,
+  Clock,
+  UserCheck,
+  Mail,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Music2,
+  Phone,
+  Code,
+  Brain,
+  Smartphone,
+} from "lucide-react";
 
 // Presentation Component
 function Presentation() {
@@ -20,8 +33,9 @@ function Presentation() {
             Web, Mobile & Intelligence Artificielle
           </h2>
           <p className="text-[#0e1934] text-base lg:text-lg xl:text-xl font-normal leading-7 lg:leading-8 max-w-full lg:max-w-[668px] mt-2">
-            Delsova développe des solutions technologiques avancées incluant applications web et mobiles, 
-            modèles d'IA en vision par ordinateur et IA générative pour transformer vos idées en réalité digitale.
+            Delsova développe des solutions technologiques avancées incluant
+            applications web et mobiles, modèles d'IA en vision par ordinateur
+            et IA générative pour transformer vos idées en réalité digitale.
           </p>
         </div>
 
@@ -60,19 +74,27 @@ function Presentation() {
             <div className="grid grid-cols-2 gap-4 p-6">
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center">
                 <Code className="text-white w-8 h-8 mb-2" />
-                <span className="text-white text-sm text-center">Développement Web</span>
+                <span className="text-white text-sm text-center">
+                  Développement Web
+                </span>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center">
                 <Smartphone className="text-white w-8 h-8 mb-2" />
-                <span className="text-white text-sm text-center">Applications Mobiles</span>
+                <span className="text-white text-sm text-center">
+                  Applications Mobiles
+                </span>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center">
                 <Brain className="text-white w-8 h-8 mb-2" />
-                <span className="text-white text-sm text-center">IA Générative</span>
+                <span className="text-white text-sm text-center">
+                  IA Générative
+                </span>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center">
                 <CheckCircle className="text-white w-8 h-8 mb-2" />
-                <span className="text-white text-sm text-center">Vision par Ordinateur</span>
+                <span className="text-white text-sm text-center">
+                  Vision par Ordinateur
+                </span>
               </div>
             </div>
           </div>
