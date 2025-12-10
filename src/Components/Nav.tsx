@@ -8,8 +8,8 @@ function Nav() {
     <nav className="flex items-center justify-between w-full bg-[#f9fcf8] px-4 lg:px-8 py-4 shadow-sm border-b-2 border-b-purple-500">
       {/* === DESKTOP LAYOUT (lg and up) === */}
       <div className="hidden lg:flex items-center w-full">
-        {/* Logo (20%) */}
-        <div className="w-[20%] flex items-center">
+        {/* Logo (15%) */}
+        <div className="w-[15%] flex items-center">
           <Link to="/">
             <div className="flex items-center">
               <img
@@ -23,39 +23,61 @@ function Nav() {
           </Link>
         </div>
 
-        {/* Blank (45%) */}
-        <div className="w-[45%]" />
+        {/* Blank Space (10%) */}
+        <div className="w-[10%]" />
 
-        {/* Navigation + Lang Selector (35%) */}
-        <div className="w-[35%] flex justify-around items-center">
+        {/* Navigation Links (40%) */}
+        <div className="w-[40%] flex justify-start items-center gap-8">
           <Link
             to="/"
-            className="text-[#0e1934] text-lg font-medium hover:text-[#4186d8] transition px-2 py-1"
+            className="text-[#0e1934] text-base font-medium hover:text-[#4186d8] transition"
           >
             Accueil
           </Link>
 
           <Link
             to="/services"
-            className="text-[#0e1934] text-lg font-medium hover:text-[#4186d8] transition px-2 py-1"
+            className="text-[#0e1934] text-base font-medium hover:text-[#4186d8] transition"
           >
             Services
           </Link>
 
           <Link
+            to="/services"
+            className="text-base font-bold text-[#4186d8] transition hover:text-[#2d5fa8] hover:text-3xl"
+          >
+            New Solutions
+          </Link>
+
+          <Link
             to="/apropos"
-            className="text-[#0e1934] text-lg font-medium hover:text-[#4186d8] transition px-2 py-1"
+            className="text-[#0e1934] text-base font-medium hover:text-[#4186d8] transition"
           >
             À propos
           </Link>
+        </div>
 
-          {/* Langue Selector */}
-          <div className="w-36 h-12 flex items-center justify-start gap-3 rounded-[28.5px] border-[1.5px] border-[#4186d8] px-3 cursor-pointer hover:bg-[#f0f5ff] transition">
-            <div className="w-8 h-8 bg-[#e6f0ff] rounded-full flex items-center justify-center overflow-hidden">
-              <div className="w-4 h-4 bg-gradient-to-r from-[#0e1934] to-[#4186d8] rounded-full" />
-            </div>
-            <div className="text-[#0e1934] text-base font-medium">Français</div>
-          </div>
+        {/* Blank Space (10%) */}
+        <div className="w-[10%]" />
+
+        {/* Book a Meeting Button (25%) */}
+        <div className="w-[25%] flex justify-end">
+          <button className="px-9 py-5 bg-gradient-to-r from-[#0e1934] to-[#4186d8] text-white text-base font-bold rounded-lg hover:shadow-lg transition-shadow duration-200 flex items-center gap-3 whitespace-nowrap cursor-pointer">
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
+            Réserver une réunion
+          </button>
         </div>
       </div>
 
@@ -91,14 +113,24 @@ function Nav() {
           </Link>
         </div>
 
-        {/* Language Selector */}
+        {/* Book a Meeting Button */}
         <div className="w-1/4 flex justify-end">
-          <div className="flex flex-col items-center justify-center">
-            <div className="w-8 h-8 bg-[#e6f0ff] rounded-full flex items-center justify-center overflow-hidden border-[1.5px] border-[#4186d8]">
-              <div className="w-4 h-4 bg-gradient-to-r from-[#0e1934] to-[#4186d8] rounded-full" />
-            </div>
-            <div className="text-[#0e1934] text-xs font-medium mt-1">FR</div>
-          </div>
+          <button className="px-4 py-2 bg-gradient-to-r from-[#0e1934] to-[#4186d8] text-white text-xs font-bold rounded-lg hover:shadow-lg transition-shadow duration-200 flex items-center gap-2">
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
+            Réserver
+          </button>
         </div>
       </div>
     </nav>

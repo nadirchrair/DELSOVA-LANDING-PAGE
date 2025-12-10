@@ -16,7 +16,7 @@ const processSteps = [
     number: "01",
     title: "ANALYSE DE SITUATION",
     description:
-      "Compréhension complète de votre contexte, objectifs et contraintes.",
+      "Compréhension complète de votre contexte, objectifs, contraintes et audit des processus existants.",
     icon: Search,
     color: "from-blue-500 to-cyan-400",
     shortDesc: "Analyse initiale",
@@ -24,45 +24,24 @@ const processSteps = [
   {
     id: 2,
     number: "02",
-    title: "ÉTAT DES LIEUX",
+    title: "DIAGNOSTIC ET ANALYSE DU PROBLÈME",
     description:
-      "Audit des processus existants, systèmes utilisés et performances actuelles.",
-    icon: FileText,
-    color: "from-cyan-500 to-teal-400",
-    shortDesc: "Audit complet",
-  },
-  {
-    id: 3,
-    number: "03",
-    title: "DIAGNOSTIC",
-    description:
-      "Identification des forces, faiblesses et obstacles opérationnels.",
-    icon: ClipboardCheck,
+      "Identification des forces, faiblesses et obstacles opérationnels. Définition claire des priorités et des enjeux qui impactent votre activité.",
+    icon: Target,
     color: "from-teal-500 to-emerald-400",
     shortDesc: "Diagnostic approfondi",
   },
   {
-    id: 4,
-    number: "04",
-    title: "ANALYSE DU PROBLÈME",
+    id: 3,
+    number: "03",
+    title: "PROPOSITION D'UNE SOLUTION",
     description:
-      "Définition claire des priorités et des enjeux qui impactent votre activité.",
-    icon: Target,
-    color: "from-emerald-500 to-green-400",
-    shortDesc: "Identification des enjeux",
-  },
-  {
-    id: 5,
-    number: "05",
-    title: "PROPOSITION DE REMÈDE",
-    description:
-      "Recommandations adaptées avec roadmap, actions priorisées et ROI estimé.",
+      "Recommandations adaptées avec roadmap, actions priorisées et ROI estimé pour votre transformation.",
     icon: Lightbulb,
     color: "from-green-500 to-lime-400",
     shortDesc: "Solution personnalisée",
   },
 ];
-
 function NotreProcessusClient() {
   const [activeStep, setActiveStep] = useState(0);
 
@@ -78,7 +57,11 @@ function NotreProcessusClient() {
           transformation digitale
         </p>
         <p className="text-gray-600 text-sm lg:text-base max-w-3xl mx-auto px-4">
-          <span className="font-semibold text-[#0e1934]">Engagement Delsova :</span> Des solutions spécifiques et adaptées, conçues pour garantir la performance et le succès durable de votre entreprise.
+          <span className="font-semibold text-[#0e1934]">
+            Engagement Delsova :
+          </span>{" "}
+          Des solutions spécifiques et adaptées, conçues pour garantir la
+          performance et le succès durable de votre entreprise.
         </p>
       </div>
 

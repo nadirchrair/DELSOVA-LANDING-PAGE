@@ -19,7 +19,8 @@ function Presentation() {
             Nous accompagnons la transformation des entreprises
           </h2>
           <p className="text-[#0e1934] text-base lg:text-lg xl:text-xl font-normal leading-7 lg:leading-8 max-w-full lg:max-w-[668px] mt-2">
-            Nous sommes des bâtisseurs. Nous sommes des visionnaires. Nous créons des solutions qui font avancer votre entreprise au moyen d'outils numériques et digitaux performants.
+            Nous sommes des visionnaires. Nous créons des solutions qui font
+            avancer votre entreprise au moyen d'outils numériques performants.
           </p>
         </div>
 
@@ -27,43 +28,42 @@ function Presentation() {
         <div className="flex flex-wrap gap-3">
           <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md">
             <Sparkles className="w-4 h-4 text-[#4186d8]" />
-            <span className="text-sm font-medium text-gray-700">Innovation</span>
+            <span className="text-sm font-medium text-gray-700">
+              Innovation
+            </span>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md">
             <Zap className="w-4 h-4 text-[#964cb2]" />
-            <span className="text-sm font-medium text-gray-700">Performance</span>
+            <span className="text-sm font-medium text-gray-700">
+              Performance
+            </span>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md">
             <TrendingUp className="w-4 h-4 text-emerald-600" />
-            <span className="text-sm font-medium text-gray-700">Succès Durable</span>
+            <span className="text-sm font-medium text-gray-700">
+              Succès Durable
+            </span>
           </div>
         </div>
 
-        {/* Buttons Section */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-2">
-          {/* Contact Button */}
-          <div className="w-full sm:w-64 h-16 bg-gradient-to-r from-[#4186d8] to-[#964cb2] rounded-2xl shadow-lg flex items-center justify-center px-4 cursor-pointer hover:opacity-90 transition">
-            <div className="flex flex-col items-center">
-              <div className="text-white text-lg font-semibold">
-                Nous Contacter
-              </div>
-              <div className="text-white text-xs font-medium">
-                Discutons de votre projet
-              </div>
-            </div>
-          </div>
-
-          {/* Portfolio Button */}
-          <div className="w-full sm:w-64 h-16 bg-[#0e1934] rounded-2xl shadow-lg flex items-center justify-center px-4 cursor-pointer hover:bg-[#1a2a4a] transition">
-            <div className="flex flex-col items-center">
-              <div className="text-white text-lg font-semibold">
-                Voir nos Réalisations
-              </div>
-              <div className="text-white text-xs font-medium">
-                Découvrez nos projets
-              </div>
-            </div>
-          </div>
+        {/* Book a Meeting Button */}
+        <div className="mt-2">
+          <button className="px-9 py-6 bg-gradient-to-r from-[#0e1934] to-[#4186d8] text-white text-base font-bold rounded-lg hover:shadow-lg transition-shadow duration-200 flex items-center gap-3 whitespace-nowrap">
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
+            Réserver une réunion
+          </button>
         </div>
       </div>
 
