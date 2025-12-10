@@ -84,7 +84,8 @@ function AProposDeNous() {
           <p className="text-gray-700 text-lg leading-8 mb-6">
             <span className="font-bold text-[#0e1934]">
               Delsova Technologies
-            </span>{" "}
+            </span>
+            , créée en <span className="font-bold text-[#4186d8]">2025</span>,
             est une entreprise spécialisée dans les solutions digitales et
             l'innovation technologique. Fondée par des professionnels
             expérimentés avec plus de 60 ans d'expérience cumulée en leadership
@@ -254,7 +255,7 @@ function AProposDeNous() {
               <div className="flex items-center gap-2 text-gray-600">
                 <Calendar className="w-4 h-4 flex-shrink-0" />
                 <span className="font-medium">Année de création :</span>
-                <span className="text-[#4186d8] font-bold">2026</span>
+                <span className="text-[#4186d8] font-bold">2025</span>
               </div>
               <div className="flex items-start gap-2 text-gray-600">
                 <Award className="w-4 h-4 flex-shrink-0 mt-0.5" />
