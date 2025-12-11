@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Calendar, X, Mail, User, Clock } from "lucide-react";
 
-// Initialize EmailJS (add this at the top of your app or use environment variables)
+// EmailJS Configuration
 const EMAILJS_SERVICE_ID = "service_delsova";
 const EMAILJS_TEMPLATE_ID = "template_i1kgw7v";
 const EMAILJS_PUBLIC_KEY = "H1OValIRLyfrT3Z1R";
@@ -18,20 +18,39 @@ export default function BookingModal({ isOpen, onClose }) {
   const [loading, setLoading] = useState(false);
   const [confirmationMessage, setConfirmationMessage] = useState("");
   const [emailStatus, setEmailStatus] = useState("");
+  const [emailjsReady, setEmailjsReady] = useState(false);
 
   const availableTimes = ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00"];
 
-  // Initialize EmailJS
+  // Initialize EmailJS with proper error handling
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const script = document.createElement("script");
-      script.src =
-        "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js";
-      script.onload = () => {
-        window.emailjs.init(EMAILJS_PUBLIC_KEY);
-      };
-      document.body.appendChild(script);
-    }
+    const loadEmailJS = async () => {
+      try {
+        const script = document.createElement("script");
+        script.src =
+          "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js";
+        script.async = true;
+
+        script.onload = () => {
+          console.log("EmailJS library loaded");
+          if (window.emailjs) {
+            window.emailjs.init(EMAILJS_PUBLIC_KEY);
+            setEmailjsReady(true);
+          }
+        };
+
+        script.onerror = () => {
+          console.error("Failed to load EmailJS script");
+          setEmailStatus("Erreur de chargement EmailJS");
+        };
+
+        document.head.appendChild(script);
+      } catch (error) {
+        console.error("Error loading EmailJS:", error);
+      }
+    };
+
+    loadEmailJS();
   }, []);
 
   const handleInputChange = (e) => {
@@ -50,6 +69,10 @@ export default function BookingModal({ isOpen, onClose }) {
 
   const sendEmails = async () => {
     try {
+      if (!window.emailjs) {
+        throw new Error("EmailJS not loaded");
+      }
+
       const formattedDate = new Date(formData.date).toLocaleDateString(
         "fr-FR",
         {
@@ -60,30 +83,10 @@ export default function BookingModal({ isOpen, onClose }) {
         }
       );
 
-      // Email 1: Send to client
-      const clientEmailParams = {
-        to_email: formData.email,
-        to_name: formData.fullName,
-        subject: "Votre réunion avec Delsova Technologies confirmée",
-        client_name: formData.fullName,
-        meeting_date: formattedDate,
-        meeting_time: formData.time,
-        phone: formData.phone,
-      };
-
-      await window.emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        clientEmailParams
-      );
-
-      console.log("✅ Email sent to client:", formData.email);
-
-      // Email 2: Send to Delsova team
+      // Email to Delsova team (chrairmohamednadir@gmail.com)
       const delsovaMeetingParams = {
         to_email: "chrairmohamednadir@gmail.com",
         to_name: "Delsova Team",
-        subject: "Nouvelle réunion réservée",
         client_name: formData.fullName,
         client_email: formData.email,
         client_phone: formData.phone,
@@ -91,26 +94,34 @@ export default function BookingModal({ isOpen, onClose }) {
         meeting_time: formData.time,
       };
 
-      await window.emailjs.send(
+      console.log("📧 Sending email to Delsova...", delsovaMeetingParams);
+
+      const delsovResponse = await window.emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         delsovaMeetingParams
       );
 
-      console.log("✅ Email sent to Delsova team");
+      console.log("✅ Email sent to Delsova:", delsovResponse);
 
       return true;
     } catch (error) {
       console.error("❌ Email Error:", error);
-      setEmailStatus(
-        "⚠️ Réunion enregistrée mais les emails n'ont pas pu être envoyés. Vérifiez votre configuration EmailJS."
-      );
+      setEmailStatus("⚠️ Erreur: " + error.message);
       return false;
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!emailjsReady) {
+      setConfirmationMessage(
+        "❌ EmailJS n'est pas prêt. Attendez et réessayez."
+      );
+      return;
+    }
+
     setLoading(true);
     setEmailStatus("");
 
@@ -125,12 +136,11 @@ export default function BookingModal({ isOpen, onClose }) {
         }
       );
 
-      // Try to send emails
       const emailsSent = await sendEmails();
 
       if (emailsSent) {
         setConfirmationMessage(
-          `✅ Réunion confirmée ! Un email de confirmation a été envoyé à ${formData.email} et à l'équipe Delsova.`
+          `✅ Réunion confirmée ! Email envoyé à ${formData.email} et à l'équipe Delsova.`
         );
       } else {
         setConfirmationMessage(
@@ -214,6 +224,15 @@ export default function BookingModal({ isOpen, onClose }) {
         {emailStatus && (
           <div className="p-4 m-4 bg-yellow-50 border-l-4 border-yellow-500 rounded">
             <p className="text-yellow-800 font-medium text-sm">{emailStatus}</p>
+          </div>
+        )}
+
+        {/* EmailJS Status */}
+        {!emailjsReady && (
+          <div className="p-4 m-4 bg-orange-50 border-l-4 border-orange-500 rounded">
+            <p className="text-orange-800 font-medium text-sm">
+              ⏳ EmailJS initialisation...
+            </p>
           </div>
         )}
 
@@ -373,7 +392,7 @@ export default function BookingModal({ isOpen, onClose }) {
               {step === 2 && (
                 <button
                   onClick={handleSubmit}
-                  disabled={!canProceed() || loading}
+                  disabled={!canProceed() || loading || !emailjsReady}
                   className="flex-1 px-4 py-2 bg-emerald-500 text-white font-medium rounded-lg hover:bg-emerald-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition flex items-center justify-center gap-2"
                 >
                   {loading ? "En cours..." : "Confirmer"}
