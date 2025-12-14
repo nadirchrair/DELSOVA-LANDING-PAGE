@@ -117,11 +117,28 @@ function Nav() {
           >
             Services
           </Link>
+
+          <Link
+            to="/services"
+            className="text-sm font-bold text-[#4186d8] transition hover:text-[#2d5fa8]"
+          >
+            New
+          </Link>
+
+          <Link
+            to="/apropos"
+            className="text-[#0e1934] text-sm font-medium hover:text-[#4186d8] transition px-2 py-1"
+          >
+            À propos
+          </Link>
         </div>
 
         {/* Book a Meeting Button */}
         <div className="w-1/4 flex justify-end">
-          <button className="px-4 py-2 bg-gradient-to-r from-[#0e1934] to-[#4186d8] text-white text-xs font-bold rounded-lg hover:shadow-lg transition-shadow duration-200 flex items-center gap-2">
+          <button
+            onClick={() => setIsBookingOpen(true)}
+            className="px-4 py-2 bg-gradient-to-r from-[#0e1934] to-[#4186d8] text-white text-xs font-bold rounded-lg hover:shadow-lg transition-shadow duration-200 flex items-center gap-2"
+          >
             <svg
               className="w-4 h-4"
               fill="none"
