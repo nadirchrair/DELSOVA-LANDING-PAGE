@@ -15,6 +15,7 @@ import {
 import AProposDeNous from "../Components/AProposDeNous";
 import NotreMission from "../Components/NotreMission";
 import Faq from "../Components/Faq";
+import TechSection from "../Components/TechSection.tsx";
 
 function Accueil() {
   return (
@@ -29,6 +30,7 @@ function Accueil() {
 
       <NotreProcessusClient />
       <NotreMission />
+      <TechSection />
       <Faq />
       <ContactForm />
     </div>

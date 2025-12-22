@@ -117,14 +117,12 @@ function Nav() {
           >
             Services
           </Link>
-
           <Link
             to="/services"
             className="text-sm font-bold text-[#4186d8] transition hover:text-[#2d5fa8]"
           >
             New
           </Link>
-
           <Link
             to="/apropos"
             className="text-[#0e1934] text-sm font-medium hover:text-[#4186d8] transition px-2 py-1"
