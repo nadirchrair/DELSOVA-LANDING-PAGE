@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import { Calendar, X, Mail, User, Clock } from "lucide-react";
 
 // EmailJS Configuration
@@ -6,19 +6,46 @@ const EMAILJS_SERVICE_ID = "service_delsova";
 const EMAILJS_TEMPLATE_ID = "template_i1kgw7v";
 const EMAILJS_PUBLIC_KEY = "H1OValIRLyfrT3Z1R";
 
-export default function BookingModal({ isOpen, onClose }) {
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
+// Extend Window interface to include emailjs
+declare global {
+  interface Window {
+    emailjs: {
+      init: (publicKey: string) => void;
+      send: (
+        serviceId: string,
+        templateId: string,
+        params: Record<string, string>
+      ) => Promise<{ status: number; text: string }>;
+    };
+  }
+}
+
+interface BookingModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+interface FormDataType {
+  fullName: string;
+  email: string;
+  phone: string;
+  date: string;
+  time: string;
+}
+
+export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
+  const [step, setStep] = useState<number>(1);
+  const [formData, setFormData] = useState<FormDataType>({
     fullName: "",
     email: "",
     phone: "",
     date: "",
     time: "",
   });
-  const [loading, setLoading] = useState(false);
-  const [confirmationMessage, setConfirmationMessage] = useState("");
-  const [emailStatus, setEmailStatus] = useState("");
-  const [emailjsReady, setEmailjsReady] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [confirmationMessage, setConfirmationMessage] = useState<string>("");
+  const [emailStatus, setEmailStatus] = useState<string>("");
+  const [emailjsReady, setEmailjsReady] = useState<boolean>(false);
 
   const availableTimes = ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00"];
 
@@ -53,21 +80,23 @@ export default function BookingModal({ isOpen, onClose }) {
     loadEmailJS();
   }, []);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.currentTarget;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
 
-  const getMinDate = () => {
+  const getMinDate = (): string => {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     return tomorrow.toISOString().split("T")[0];
   };
 
-  const sendEmails = async () => {
+  const sendEmails = async (): Promise<boolean> => {
     try {
       if (!window.emailjs) {
         throw new Error("EmailJS not loaded");
@@ -84,7 +113,7 @@ export default function BookingModal({ isOpen, onClose }) {
       );
 
       // Email to Delsova team (chrairmohamednadir@gmail.com)
-      const delsovaMeetingParams = {
+      const delsovaMeetingParams: Record<string, string> = {
         to_email: "chrairmohamednadir@gmail.com",
         to_name: "Delsova Team",
         client_name: formData.fullName,
@@ -106,13 +135,15 @@ export default function BookingModal({ isOpen, onClose }) {
 
       return true;
     } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : "Unknown error";
       console.error("❌ Email Error:", error);
-      setEmailStatus("⚠️ Erreur: " + error.message);
+      setEmailStatus("⚠️ Erreur: " + errorMessage);
       return false;
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!emailjsReady) {
@@ -169,12 +200,12 @@ export default function BookingModal({ isOpen, onClose }) {
     }
   };
 
-  const canProceed = () => {
+  const canProceed = (): boolean => {
     switch (step) {
       case 1:
-        return formData.fullName && formData.email && formData.phone;
+        return !!(formData.fullName && formData.email && formData.phone);
       case 2:
-        return formData.date && formData.time;
+        return !!(formData.date && formData.time);
       default:
         return true;
     }
