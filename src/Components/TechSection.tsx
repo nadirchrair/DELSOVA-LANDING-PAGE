@@ -213,7 +213,7 @@ export default function TechSection() {
         {/* Circular Tech Stack */}
         <div className="flex justify-center items-center mb-12">
           <div
-            className="relative w-full max-w-2xl"
+            className="relative w-full max-w-xl"
             style={{ aspectRatio: "1 / 1", minHeight: "600px" }}
           >
             <svg
