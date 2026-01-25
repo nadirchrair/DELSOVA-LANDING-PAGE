@@ -1,4 +1,4 @@
-import AProposDeNous from "../Components/AProposDeNous";
+import AProposDeNous from "../Components/AProposDeNous.tsx";
 
 function Propo() {
   return (

@@ -1,7 +1,4 @@
-import React from "react";
-import NosExpertises from "/src/Components/NosExpertises.tsx";
-import Footer from "../Components/Footer";
-import { AdvancedWaveSeparator } from "../Components/WaveVariants";
+import NosExpertises from "../Components/NosExpertises.tsx";
 
 function CommentCaMarche() {
   return (
