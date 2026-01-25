@@ -1,28 +1,34 @@
-import React from "react";
-import { Smartphone, Globe, Brain, Cpu, Target, TrendingUp } from "lucide-react";
+import {
+  Smartphone,
+  Globe,
+  Brain,
+  Cpu,
+  Target,
+  TrendingUp,
+} from "lucide-react";
 
 function QuiSommesNous() {
   const services = [
     {
       icon: Smartphone,
       title: "Applications Mobiles & Tablettes",
-      description: "Conception d'applications iOS & Android performantes"
+      description: "Conception d'applications iOS & Android performantes",
     },
     {
       icon: Globe,
       title: "Sites Web Professionnels",
-      description: "Développement de plateformes web modernes et évolutives"
+      description: "Développement de plateformes web modernes et évolutives",
     },
     {
       icon: Brain,
       title: "Intelligence Artificielle",
-      description: "IA & Automatisation des processus métiers"
+      description: "IA & Automatisation des processus métiers",
     },
     {
       icon: Cpu,
       title: "Digitalisation des Flux",
-      description: "Optimisation des opérations et processus métiers"
-    }
+      description: "Optimisation des opérations et processus métiers",
+    },
   ];
 
   return (
@@ -38,7 +44,13 @@ function QuiSommesNous() {
           </h1>
         </div>
         <p className="text-gray-600 text-base sm:text-lg lg:text-xl max-w-4xl mx-auto px-4 leading-relaxed">
-          <span className="font-bold text-[#0e1934]">Delsova Technologies</span> est une entreprise technologique <span className="font-semibold text-[#4186d8]">B2B (Business to Business)</span>, spécialisée dans la création de solutions adaptées aux besoins du marché national et international.
+          <span className="font-bold text-[#0e1934]">Delsova Technologies</span>{" "}
+          est une entreprise technologique{" "}
+          <span className="font-semibold text-[#4186d8]">
+            B2B (Business to Business)
+          </span>
+          , spécialisée dans la création de solutions adaptées aux besoins du
+          marché national et international.
         </p>
       </div>
 
@@ -87,7 +99,10 @@ function QuiSommesNous() {
               </h2>
             </div>
             <p className="text-white text-lg sm:text-xl lg:text-2xl font-medium leading-relaxed max-w-3xl mx-auto">
-              Assurer le succès de votre entreprise grâce à des outils numériques <span className="font-bold">fiables</span>, <span className="font-bold">modernes</span> et <span className="font-bold">adaptés</span>.
+              Assurer le succès de votre entreprise grâce à des outils
+              numériques <span className="font-bold">fiables</span>,{" "}
+              <span className="font-bold">modernes</span> et{" "}
+              <span className="font-bold">adaptés</span>.
             </p>
           </div>
 
@@ -96,19 +111,25 @@ function QuiSommesNous() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
               <div className="text-white text-center">
                 <div className="text-3xl font-bold mb-1">Fiables</div>
-                <div className="text-sm text-blue-100">Solutions robustes et sécurisées</div>
+                <div className="text-sm text-blue-100">
+                  Solutions robustes et sécurisées
+                </div>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
               <div className="text-white text-center">
                 <div className="text-3xl font-bold mb-1">Modernes</div>
-                <div className="text-sm text-blue-100">Technologies de pointe</div>
+                <div className="text-sm text-blue-100">
+                  Technologies de pointe
+                </div>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
               <div className="text-white text-center">
                 <div className="text-3xl font-bold mb-1">Adaptés</div>
-                <div className="text-sm text-blue-100">Sur mesure pour vos besoins</div>
+                <div className="text-sm text-blue-100">
+                  Sur mesure pour vos besoins
+                </div>
               </div>
             </div>
           </div>

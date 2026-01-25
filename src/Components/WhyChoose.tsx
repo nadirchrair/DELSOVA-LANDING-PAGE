@@ -1,15 +1,32 @@
-import React, { useState } from "react";
-import {
-  Code,
-  Brain,
-  Clock,
-  UserCheck,
-  ArrowRight,
-  Zap,
-  Shield,
-} from "lucide-react";
+import type { FC } from "react";
+import { useState } from "react";
+import { Code, Brain, Clock, UserCheck, ArrowRight, Zap } from "lucide-react";
 
-const WhyChoose: React.FC = () => {
+const whyChooseStyles = `
+  @keyframes blob {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+  }
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+`;
+
+const WhyChoose: FC = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const features = [
@@ -90,7 +107,7 @@ const WhyChoose: React.FC = () => {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => {
+          {features.map((feature) => {
             const Icon = feature.icon;
             const isHovered = hoveredCard === feature.id;
 
@@ -192,29 +209,7 @@ const WhyChoose: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes blob {
-          0%,
-          100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-        }
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
+      <style>{whyChooseStyles}</style>
     </section>
   );
 };
