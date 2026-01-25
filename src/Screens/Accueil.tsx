@@ -1,21 +1,11 @@
-import React from "react";
 import Presentation from "../Components/Presentation";
-import WhyChoose from "../Components/WhyChoose";
-import Footer from "../Components/Footer";
 import ContactForm from "../Components/ContactForm";
-import QuiSommesNous from "../Components/QuiSommesNous";
 import NotreProcessusClient from "../Components/NotreProcessusClient";
-import {
-  AdvancedWaveSeparator,
-  AsymmetricWaveSeparator,
-  DynamicWaveSeparator,
-  SoftWaveSeparator,
-  TechWaveSeparator,
-} from "../Components/WaveVariants";
-import AProposDeNous from "../Components/AProposDeNous";
+import { DynamicWaveSeparator } from "../Components/WaveVariants";
 import NotreMission from "../Components/NotreMission";
 import Faq from "../Components/Faq";
 import TechSection from "../Components/TechSection.tsx";
+import NotreProcessusClient from "../Components/NotreProcessusClient";
 
 function Accueil() {
   return (

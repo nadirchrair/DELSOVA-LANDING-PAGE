@@ -1,18 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
-  CheckCircle,
-  Clock,
-  UserCheck,
   Mail,
   Facebook,
   Instagram,
   Linkedin,
   Music2,
   Phone,
-  Code,
-  Brain,
-  Smartphone,
 } from "lucide-react";
 
 const Footer: React.FC = () => {

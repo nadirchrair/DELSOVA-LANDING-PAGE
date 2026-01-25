@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import type { ChangeEvent, FormEvent } from "react";
 
 function ContactSection() {
   const [form, setForm] = useState({
@@ -7,11 +8,13 @@ function ContactSection() {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted:", form);
   };

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import type { ChangeEvent, FormEvent, MouseEvent } from "react";
+import type { ChangeEvent, MouseEvent } from "react";
 import { Calendar, X, Mail, User, Clock } from "lucide-react";
 
 // EmailJS Configuration

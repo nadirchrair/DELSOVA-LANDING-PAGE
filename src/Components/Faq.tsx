@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ChevronDown, MessageCircle } from "lucide-react";
 
 const faqData = [
@@ -10,12 +10,12 @@ const faqData = [
       "DELSOVA offre une gamme complète de services : Intelligence Artificielle (IA), Digitalisation Entreprises (ERP/CRM), Smart Software sur mesure, et Web & Mobile. Nous transformons vos processus métier avec des solutions innovantes et performantes.",
   },
   {
-  id: 2,
-  category: "Services",
-  question: "Pouvez-vous personnaliser les solutions selon mes besoins ?",
-  answer:
-    "Absolument ! Nous créons des solutions spécifiques et adaptées à votre contexte. Notre processus client en 5 étapes garantit une compréhension complète de vos besoins avant de proposer des remèdes optimaux."
-},
+    id: 2,
+    category: "Services",
+    question: "Pouvez-vous personnaliser les solutions selon mes besoins ?",
+    answer:
+      "Absolument ! Nous créons des solutions spécifiques et adaptées à votre contexte. Notre processus client en 5 étapes garantit une compréhension complète de vos besoins avant de proposer des remèdes optimaux.",
+  },
   {
     id: 3,
     category: "Processus",
@@ -38,6 +38,27 @@ const faqData = [
       "Nous offrons un support continu incluant maintenance, mises à jour et assistance technique. Votre succès est notre priorité, et nous restons à vos côtés après le lancement.",
   },
 ];
+
+const faqStyles = `
+  @keyframes blob {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+  }
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+`;
 
 function Faq() {
   const [activeId, setActiveId] = useState<number | null>(null);
@@ -124,26 +145,7 @@ function Faq() {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes blob {
-          0%,
-          100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-        }
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-      `}</style>
+      <style>{faqStyles}</style>
     </section>
   );
 }

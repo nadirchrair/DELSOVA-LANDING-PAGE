@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Brain,
   Cpu,
@@ -13,13 +13,14 @@ const services = [
     id: 1,
     title: "Intelligence Artificielle",
     category: "AI Automation",
-    description: "Automatisation intelligente, vision par ordinateur, analyse prédictive",
+    description:
+      "Automatisation intelligente, vision par ordinateur, analyse prédictive",
     details: [
       "Automatisation intelligente des tâches répétitives",
       "Vision par ordinateur & analyse d'images avancée",
       "Analyse prédictive & modèles de machine learning",
       "Modèles génératifs (GPT, Computer Vision)",
-      "IA spécialisée adaptée à votre secteur"
+      "IA spécialisée adaptée à votre secteur",
     ],
     icon: Brain,
     color: "from-violet-600 to-purple-600",
@@ -34,7 +35,7 @@ const services = [
       "CRM (Customer Relationship Management) intelligent",
       "GED (Gestion Électronique des Documents)",
       "Automatisation de workflows complexes",
-      "Optimisation des processus internes"
+      "Optimisation des processus internes",
     ],
     icon: Cpu,
     color: "from-blue-600 to-cyan-600",
@@ -43,13 +44,14 @@ const services = [
     id: 3,
     title: "Smart Software",
     category: "Custom Development",
-    description: "Solutions adaptées, architecture scalable, sécurité renforcée",
+    description:
+      "Solutions adaptées, architecture scalable, sécurité renforcée",
     details: [
       "Développement de solutions sur mesure",
       "Architecture scalable et évolutive",
       "Sécurité renforcée et conformité des données",
       "Performance optimisée et haute disponibilité",
-      "Maintenance et évolutions continues"
+      "Maintenance et évolutions continues",
     ],
     icon: Code2,
     color: "from-emerald-600 to-teal-600",
@@ -64,17 +66,40 @@ const services = [
       "Apps iOS & Android natives optimisées",
       "UX/UI moderne et intuitive",
       "Intégration API & services cloud",
-      "Déploiement cloud sécurisé"
+      "Déploiement cloud sécurisé",
     ],
     icon: Smartphone,
     color: "from-orange-600 to-red-600",
   },
 ];
 
+const expertiseStyles = `
+  @keyframes blob {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+  }
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+`;
 
 function NosExpertises() {
-  const [activeService, setActiveService] = useState(null);
-  const [hoveredService, setHoveredService] = useState(null);
+  const [activeService, setActiveService] = useState<number | null>(null);
+  const [hoveredService, setHoveredService] = useState<number | null>(null);
 
   return (
     <section className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden py-12 lg:py-20">
@@ -102,7 +127,9 @@ function NosExpertises() {
           </h1>
 
           <p className="text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto">
-            De l'Intelligence Artificielle aux applications web et mobile, nous maîtrisons l'ensemble des technologies pour transformer votre entreprise
+            De l'Intelligence Artificielle aux applications web et mobile, nous
+            maîtrisons l'ensemble des technologies pour transformer votre
+            entreprise
           </p>
         </div>
 
@@ -214,29 +241,7 @@ function NosExpertises() {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes blob {
-          0%,
-          100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-        }
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
+      <style>{expertiseStyles}</style>
     </section>
   );
 }
