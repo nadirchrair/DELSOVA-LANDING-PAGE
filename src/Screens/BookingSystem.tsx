@@ -1,4 +1,5 @@
-import { useState, useEffect, ChangeEvent, FormEvent } from "react";
+import { useState, useEffect } from "react";
+import type { ChangeEvent, FormEvent, MouseEvent } from "react";
 import { Calendar, X, Mail, User, Clock } from "lucide-react";
 
 // EmailJS Configuration
@@ -143,8 +144,8 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     }
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault?.();
 
     if (!emailjsReady) {
       setConfirmationMessage(
