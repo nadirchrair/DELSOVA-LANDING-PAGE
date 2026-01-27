@@ -5,7 +5,7 @@ import CommentCaMarche from "./Screens/CommentCaMarche.tsx";
 import Nav from "./Components/Nav.tsx";
 import Propo from "./Screens/Propo.tsx";
 import Footer from "./Components/Footer.tsx";
-import BookingSystem from "./Screens/BookingSystem.tsx";
+import BookingPage from "./Screens/BookingPage.tsx";
 
 function App() {
   return (
@@ -15,9 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/apropos" element={<Propo />} />
-
         <Route path="/services" element={<CommentCaMarche />} />
-        <Route path="/booking" element={<BookingSystem />} />
+        <Route path="/booking" element={<BookingPage />} />
       </Routes>
       <Footer />
     </Router>

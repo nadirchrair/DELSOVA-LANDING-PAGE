@@ -1,22 +1,38 @@
-import React, { useState } from "react";
+"use client";
+import { useState } from "react";
 import { Calendar, X } from "lucide-react";
-import Step1PersonalInfo from "./Step1PersonalInfo";
-import Step2DateTime from "./Step2DateTime";
-import BookingConfirmation from "./BookingConfirmation";
+import Step1PersonalInfo from "./Step1personalinfo.tsx";
+import Step2DateTime from "./Step2DateTime.tsx";
+import BookingConfirmation from "./BookingConfirmation.tsx";
 
-export default function BookingModal({ isOpen, onClose }) {
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
+interface BookingModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+interface FormDataType {
+  fullName: string;
+  email: string;
+  phone: string;
+  date: string;
+  time: string;
+}
+
+export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
+  const [step, setStep] = useState<number>(1);
+  const [formData, setFormData] = useState<FormDataType>({
     fullName: "",
     email: "",
     phone: "",
     date: "",
     time: "",
   });
-  const [loading, setLoading] = useState(false);
-  const [confirmationMessage, setConfirmationMessage] = useState("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [confirmationMessage, setConfirmationMessage] = useState<string>("");
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -24,7 +40,7 @@ export default function BookingModal({ isOpen, onClose }) {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setLoading(true);
 
@@ -95,12 +111,12 @@ export default function BookingModal({ isOpen, onClose }) {
     }
   };
 
-  const canProceed = () => {
+  const canProceed = (): boolean => {
     switch (step) {
       case 1:
-        return formData.fullName && formData.email && formData.phone;
+        return !!(formData.fullName && formData.email && formData.phone);
       case 2:
-        return formData.date && formData.time;
+        return !!(formData.date && formData.time);
       default:
         return true;
     }
