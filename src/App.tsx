@@ -1,11 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Accueil from "./Screens/Accueil";
-import CommentCaMarche from "./Screens/CommentCaMarche";
-import Nav from "./Components/Nav";
-import Propo from "./Screens/Propo";
-import Footer from "./Components/Footer";
-import BookingSystem from "./Screens/BookingSystem";
+import Accueil from "./Screens/Accueil.tsx";
+import CommentCaMarche from "./Screens/CommentCaMarche.tsx";
+import Nav from "./Components/Nav.tsx";
+import Propo from "./Screens/Propo.tsx";
+import Footer from "./Components/Footer.tsx";
+import BookingSystem from "./Screens/BookingSystem.tsx";
 
 function App() {
   return (

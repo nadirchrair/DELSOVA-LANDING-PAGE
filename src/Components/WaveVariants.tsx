@@ -559,8 +559,8 @@ export const AdvancedWaveSeparator: React.FC<AdvancedWaveSeparatorProps> = ({
 
 // ==================== CSS POUR LES ANIMATIONS ====================
 
-export const WaveAnimationsCSS = () => (
-  <style jsx global>{`
+export const WaveAnimationsCSS = () => {
+  const animationStyles = `
     @keyframes float {
       0%,
       100% {
@@ -588,8 +588,10 @@ export const WaveAnimationsCSS = () => (
     .animate-pulse-slow {
       animation: pulse-slow 4s ease-in-out infinite;
     }
-  `}</style>
-);
+  `;
+
+  return <style>{animationStyles}</style>;
+};
 
 // ==================== UTILISATION SIMPLIFIÉE ====================
 
