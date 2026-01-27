@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "../assets/delsova-1.png";
-import BookingModal from "../Screens/BookingSystem";
+import BookingModal from "../Screens/BookingSystem.tsx";
 
 // Nav Component
 function Nav() {
