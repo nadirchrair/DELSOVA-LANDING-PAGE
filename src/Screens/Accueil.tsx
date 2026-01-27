@@ -1,11 +1,10 @@
-import Presentation from "../Components/Presentation";
-import ContactForm from "../Components/ContactForm";
-import NotreProcessusClient from "../Components/NotreProcessusClient";
-import { DynamicWaveSeparator } from "../Components/WaveVariants";
-import NotreMission from "../Components/NotreMission";
-import Faq from "../Components/Faq";
+import Presentation from "../Components/Presentation.tsx";
+import ContactForm from "../Components/ContactForm.tsx";
+import NotreProcessusClient from "../Components/NotreProcessusClient.tsx";
+import { DynamicWaveSeparator } from "../Components/WaveVariants.tsx";
+import NotreMission from "../Components/NotreMission.tsx";
+import Faq from "../Components/Faq.tsx";
 import TechSection from "../Components/TechSection.tsx";
-import NotreProcessusClient from "../Components/NotreProcessusClient";
 
 function Accueil() {
   return (
