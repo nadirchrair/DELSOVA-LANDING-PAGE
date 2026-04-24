@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                 <Mail size={20} color="#4186d8" />
               </div>
               <div className="text-white text-base font-medium">
-                contact@delsova.com
+                contact@delsova.dz
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                 <Phone size={20} color="#4186d8" />
               </div>
               <div className="text-white text-base font-medium">
-                +33 1 23 45 67 89
+                +213654992523
               </div>
             </div>
           </div>

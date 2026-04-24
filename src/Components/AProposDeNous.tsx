@@ -232,7 +232,7 @@ function AProposDeNous() {
                 <div>
                   <div className="text-sm text-gray-500">Téléphone</div>
                   <div className="font-medium text-gray-800">
-                    +213 XXX XX XX XX
+                    +213 654992523
                   </div>
                 </div>
               </div>
@@ -244,7 +244,7 @@ function AProposDeNous() {
                 <div>
                   <div className="text-sm text-gray-500">Email</div>
                   <div className="font-medium text-gray-800">
-                    contact@delsova.com
+                    contact@delsova.dz
                   </div>
                 </div>
               </div>
