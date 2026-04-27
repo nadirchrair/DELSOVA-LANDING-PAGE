@@ -1,6 +1,9 @@
 import { Sparkles, TrendingUp, Zap } from "lucide-react";
-
+import { useState } from "react";
+import BookingModal from "../Screens/BookingSystem.tsx";
 function Presentation() {
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
+
   return (
     <section className="w-full flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 py-12 lg:py-16 bg-[#f9fcf8] gap-8 lg:gap-12">
       {/* === LEFT SIDE === */}
@@ -46,7 +49,10 @@ function Presentation() {
 
         {/* Book a Meeting Button */}
         <div className="mt-2">
-          <button className="px-9 py-6 bg-gradient-to-r from-[#0e1934] to-[#4186d8] text-white text-base font-bold rounded-lg hover:shadow-lg transition-shadow duration-200 flex items-center gap-3 whitespace-nowrap">
+          <button
+            onClick={() => setIsBookingOpen(true)}
+            className="px-9 py-6 bg-gradient-to-r from-[#0e1934] to-[#4186d8] text-white text-base font-bold rounded-lg hover:shadow-lg transition-shadow duration-200 flex items-center gap-3 whitespace-nowrap"
+          >
             <svg
               className="w-5 h-5"
               fill="none"
@@ -75,6 +81,11 @@ function Presentation() {
           />
         </div>
       </div>
+
+      <BookingModal
+        isOpen={isBookingOpen}
+        onClose={() => setIsBookingOpen(false)}
+      />
     </section>
   );
 }
