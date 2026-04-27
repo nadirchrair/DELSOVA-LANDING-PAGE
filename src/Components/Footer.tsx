@@ -8,77 +8,104 @@ import {
   Phone,
 } from "lucide-react";
 
+import logo from "../assets/delsova-1.png";
+
 const Footer: React.FC = () => {
   return (
-    <footer className="relative w-full  overflow-hidden text-gray-900 ">
-      <div className="relative z-20 bg-gradient-to-r from-[#4186d8] to-[#964cb2] px-6 lg:px-16 py-8 lg:py-12">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-12">
-          {/* === Left Section === */}
-          <div className="w-full lg:w-1/4 space-y-4">
-            <div className="flex items-center">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center mr-3">
-                <span className="text-[#4186d8] font-bold text-lg">D</span>
+    <footer className="w-full text-gray-900">
+      <div className="bg-gradient-to-r from-[#4186d8] to-[#964cb2] px-6 lg:px-16 py-10 lg:py-14">
+        
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          
+          {/* === Entreprise === */}
+          <div className="space-y-4">
+            
+            <div className="flex items-center space-x-3">
+              
+              {/* Logo */}
+              <img
+                src={logo}
+                alt="Delsova Logo"
+                className="w-10 h-10 sm:w-12 sm:h-12 object-contain bg-white rounded-xl p-1 shadow"
+              />
+
+              {/* Name */}
+              <div className="text-white">
+                <div className="text-xl font-bold leading-none">
+                  DELSOVA
+                </div>
+                <div className="text-sm opacity-80">
+                  SARL DELSOVA
+                </div>
               </div>
-              <span className="text-white text-xl font-bold">Delsova</span>
             </div>
-            <div className="text-white text-sm lg:text-base font-medium leading-6 lg:leading-7">
-              Delsova développe des solutions technologiques innovantes incluant
-              applications web et mobiles, modèles d'IA en vision par ordinateur
-              et IA générative.
-            </div>
+
+            {/* Description */}
+            <p className="text-white text-sm leading-relaxed opacity-90">
+              SARL DELSOVA est une entreprise spécialisée dans le développement
+              de solutions technologiques innovantes : applications web et
+              mobiles, intelligence artificielle et systèmes digitaux avancés.
+            </p>
           </div>
 
-          {/* === Center Section Contact === */}
-          <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start space-y-4">
-            <div className="text-white text-xl lg:text-2xl font-extrabold">
-              Contactez-nous
-            </div>
-            <div className="flex items-center space-x-4">
+          {/* === Contact === */}
+          <div className="space-y-4">
+            <h3 className="text-white text-xl font-bold">Contact</h3>
+
+            <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <Mail size={20} color="#4186d8" />
+                <Mail size={18} color="#4186d8" />
               </div>
-              <div className="text-white text-base font-medium">
+              <span className="text-white text-sm">
                 contact@delsova.dz
-              </div>
+              </span>
             </div>
-            <div className="flex items-center space-x-4">
+
+            <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <Phone size={20} color="#4186d8" />
+                <Phone size={18} color="#4186d8" />
               </div>
-              <div className="text-white text-base font-medium">
-                +213654992523
-              </div>
+              <span className="text-white text-sm">
+                +213 654 99 25 23
+              </span>
             </div>
           </div>
 
-          {/* === Right Section Réseaux sociaux === */}
-          <div className="w-full lg:w-1/4 flex flex-col items-center lg:items-start space-y-4">
-            <div className="text-white text-xl lg:text-2xl font-extrabold">
+          {/* === Réseaux sociaux === */}
+          <div className="space-y-4">
+            <h3 className="text-white text-xl font-bold">
               Réseaux sociaux
-            </div>
+            </h3>
+
             <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-100 transition">
-                <Facebook size={20} color="#4186d8" />
+              
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition">
+                <Facebook size={18} color="#4186d8" />
               </div>
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-100 transition">
-                <Instagram size={20} color="#4186d8" />
+
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition">
+                <Instagram size={18} color="#4186d8" />
               </div>
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-100 transition">
-                <Music2 size={20} color="#4186d8" />
+
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition">
+                <Music2 size={18} color="#4186d8" />
               </div>
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-100 transition">
-                <Linkedin size={20} color="#4186d8" />
+
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition">
+                <Linkedin size={18} color="#4186d8" />
               </div>
+
             </div>
           </div>
         </div>
 
-        {/* ===== Footer bottom text ===== */}
-        <div className="max-w-7xl mx-auto mt-8 lg:mt-12 pt-6 border-t border-white/30">
-          <div className="text-white text-center text-lg lg:text-xl font-semibold">
-            Tous droits réservés © 2025 Delsova
-          </div>
+        {/* === Bottom bar === */}
+        <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-white/30 text-center">
+          <p className="text-white text-sm opacity-90">
+            © 2025 <span className="font-semibold">SARL DELSOVA</span> — Tous droits réservés
+          </p>
         </div>
+
       </div>
     </footer>
   );
