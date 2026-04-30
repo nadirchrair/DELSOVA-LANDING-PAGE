@@ -7,18 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ====== SEO PRIMARY ====== -->
-  <title>Delsova — Agence Digitale IA | Développement Web & SaaS en Algérie</title>
-  <meta name="description" content="Delsova est une agence digitale spécialisée en intelligence artificielle, développement web, SaaS et applications mobiles en Algérie (Oran). Transformez votre entreprise avec nos solutions IA sur mesure." />
-  <meta name="keywords" content="agence digitale Algérie, agence IA Algérie, développement web Oran, SaaS Algérie, applications mobiles Algérie, intelligence artificielle, marketing digital Algérie, Delsova" />
+  <title>Delsova — Agence Informatique | Développement Web & SaaS en Algérie</title>
+  <meta name="description"
+    content="Delsova est une agence digitale spécialisée en intelligence artificielle, développement web, SaaS et applications mobiles en Algérie (Oran). Transformez votre entreprise avec nos solutions IA sur mesure." />
+  <meta name="keywords"
+    content="agence digitale Algérie, agence IA Algérie, développement web Oran, SaaS Algérie, applications mobiles Algérie, intelligence artificielle, marketing digital Algérie, Delsova" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Delsova" />
   <link rel="canonical" href="https://delsova.dz/" />
-
+  <link rel="alternate" hreflang="fr-dz" href="https://delsova.dz/" />
   <!-- ====== OPEN GRAPH (Facebook / LinkedIn) ====== -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://delsova.dz/" />
-  <meta property="og:title" content="Delsova — Agence Digitale IA en Algérie" />
-  <meta property="og:description" content="Spécialisée en IA, développement web, SaaS et mobile. Delsova accompagne les entreprises algériennes dans leur transformation digitale." />
+  <meta property="og:title" content="Delsova — Agence Informatique en Algérie" />
+  <meta property="og:description"
+    content="Spécialisée en IA, développement web, SaaS et mobile. Delsova accompagne les entreprises algériennes dans leur transformation digitale." />
   <meta property="og:image" content="https://delsova.dz/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -29,59 +32,75 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://delsova.dz/" />
   <meta name="twitter:title" content="Delsova — Agence Digitale IA en Algérie" />
-  <meta name="twitter:description" content="Spécialisée en IA, développement web, SaaS et mobile. Delsova accompagne les entreprises algériennes dans leur transformation digitale." />
+  <meta name="twitter:description"
+    content="Spécialisée en IA, développement web, SaaS et mobile. Delsova accompagne les entreprises algériennes dans leur transformation digitale." />
   <meta name="twitter:image" content="https://delsova.dz/assets/og-image.png" />
 
   <!-- ====== GEO TARGETING ====== -->
   <meta name="geo.region" content="DZ" />
   <meta name="geo.placename" content="Oran, Algérie" />
 
-  <!-- ====== SCHEMA.ORG JSON-LD ====== -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Delsova",
-    "alternateName": "Delsova Technologies",
-    "url": "https://delsova.dz",
-    "logo": "https://delsova.dz/assets/delsova-1.png",
-    "description": "Agence digitale spécialisée en intelligence artificielle, développement web, SaaS et applications mobiles en Algérie.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Oran",
-      "addressCountry": "DZ"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Algeria"
-    },
-    "serviceType": ["Développement Web", "Intelligence Artificielle", "SaaS", "Applications Mobiles", "Marketing Digital"],
-    "sameAs": [
-      "https://www.linkedin.com/company/delsova",
-      "https://www.facebook.com/delsova"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "availableLanguage": ["French", "Arabic"]
-    }
-  }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
 
-  <!-- ====== WEBSITE SCHEMA ====== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Delsova",
-    "url": "https://delsova.dz",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://delsova.dz/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+    {
+      "@type": "Organization",
+      "@id": "https://delsova.dz/#organization",
+      "name": "Delsova",
+      "alternateName": "Delsova Technologies",
+      "url": "https://delsova.dz",
+      "logo": "https://delsova.dz/assets/delsova-1.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/delsova",
+        "https://www.facebook.com/delsova",
+        "https://maps.app.goo.gl/Ve9tXh48DNyFRF6T8"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+213654992523",
+        "contactType": "customer service",
+        "areaServed": "DZ",
+        "availableLanguage": ["French", "Arabic"]
+      }
+    },
+
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://delsova.dz/#localbusiness",
+      "name": "Delsova",
+      "image": "https://delsova.dz/assets/delsova-1.png",
+      "url": "https://delsova.dz",
+      "telephone": "+213654992523",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bir El Djir",
+        "addressRegion": "Oran",
+        "addressCountry": "DZ"
+      },
+      "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": "35.720693",
+  "longitude": "-0.650782"
+},
+      "areaServed": [
+        "Oran",
+        "Mascara",
+        "Tlemcen",
+        "Sidi Bel Abbes"
+      ],
+      "description": "Agence digitale spécialisée en intelligence artificielle, développement web, ERP et solutions SaaS en Algérie.",
+      "priceRange": "$$"
     }
-  }
-  </script>
+
+  ]
+}
+</script>
+
+
+
+
 
   <!-- ====== FONTS ====== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
